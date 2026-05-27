@@ -1,0 +1,993 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Amazon Navbar Start -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="./imges/image.png" alt="Amazon Logo" class="amazon-logo">
+        </div>
+        <div class="nav-location">
+            <span class="nav-location-line1">Deliver to</span>
+            <span class="nav-location-line2"><i class="fas fa-map-marker-alt"></i> Pakistan</span>
+        </div>
+        <div class="nav-search">
+            <select class="nav-search-select">
+                <option>All</option>
+            </select>
+            <input type="text" class="nav-search-input" placeholder="Search Amazon">
+            <button class="nav-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-lang">
+            <img src="https://flagcdn.com/us.svg" alt="EN" class="nav-flag">
+            <span>EN <i class="fas fa-caret-down"></i></span>
+        </div>
+        <div class="nav-account">
+            <span class="nav-account-line1">Hello, sign in</span><br>
+            <span class="nav-account-line2">Account & Lists <i class="fas fa-caret-down"></i></span>
+            <div class="account-dropdown">
+                <div class="account-dropdown-box">
+                    <button class="account-signin-btn">Sign in</button>
+                    <div class="account-new">New customer? <a href="#">Start here.</a></div>
+                    <hr>
+                    <div class="account-list">
+                        <a href="#">Your Account</a><br>
+                        <a href="#">Your Orders</a><br>
+                        <a href="#">Your Wish List</a><br>
+                        <a href="#">Your Recommendations</a><br>
+                        <a href="#">Your Prime Membership</a><br>
+                        <a href="#">Your Subscribe & Save Items</a><br>
+                        <a href="#">Memberships & Subscriptions</a><br>
+                        <a href="#">Your Seller Account</a><br>
+                        <a href="#">Manage Your Content and Devices</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-orders">
+            <span class="nav-orders-line1">Returns</span><br>
+            <span class="nav-orders-line2">& Orders</span>
+        </div>
+        <div class="nav-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="nav-cart-count">0</span>
+            <br>
+            <span class="nav-cart-text">Cart</span>
+        </div>
+    </header>
+    <!-- Amazon Navbar End -->
+
+    <!-- Amazon Horizontal Menu Start -->
+    <nav class="horizontal-menu">
+        <ul>
+            <li><i class="fas fa-bars"></i> All</li>
+            <li>Today's Deals</li>
+            <li>Gift Cards</li>
+            <li>Sell</li>
+            <li>Registry</li>
+            <li>Prime Video</li>
+            <li>Customer Service</li>
+        </ul>
+    </nav>
+    <!-- Amazon Horizontal Menu End -->
+
+    <div class="amazon-container">
+        <!-- Hero Banner Section -->
+        <div class="banner-container">
+            <img src="./imges/card.png" alt="Memorial Day Sale" class="banner-img">
+        </div>
+    </div>
+
+    <!-- Cards Container Grid -->
+    <div class="cards-grid">
+
+        <!-- Card 1: Single Large Feature -->
+        <div class="content-card">
+            <h3>Get your game on</h3>
+            <div class="single-image-box">
+                <img src="./imges/game.png" alt="Gaming Setup">
+            </div>
+            <a href="#" class="card-link">Shop gaming</a>
+        </div>
+
+        <!-- Card 2: 4-Grid Layout (Fashion) -->
+        <div class="content-card">
+            <h3>Shop Fashion for less</h3>
+            <div class="quad-grid">
+                <div class="grid-item">
+                    <img src="./imges/pan.png" alt="Jeans">
+                    <span>Jeans under $50</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/shirt.png" alt="Tops">
+                    <span>Tops under $25</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/f-shirt.png" alt="Dresses">
+                    <span>Dresses under $30</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/shoe.png" alt="Shoes">
+                    <span>Shoes under $50</span>
+                </div>
+            </div>
+            <a href="#" class="card-link">See all deals</a>
+        </div>
+
+        <!-- Card 3: 4-Grid Layout (Home Arrivals) -->
+        <div class="content-card">
+            <h3>New home arrivals under $50</h3>
+            <div class="quad-grid">
+                <div class="grid-item">
+                    <img src="./imges/hotpot.png" alt="Kitchen">
+                    <span>Kitchen & Dining</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/color.png" alt="Home Improvement">
+                    <span>Home Improvement</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/circle.png" alt="Decor">
+                    <span>Décor</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/bath.png" alt="Bedding">
+                    <span>Bedding & Bath</span>
+                </div>
+            </div>
+            <a href="#" class="card-link">Shop the latest from Home</a>
+        </div>
+
+        <!-- Card 4: 4-Grid Layout (Grilling) -->
+        <div class="content-card">
+            <h3>Grilling must-haves for Dads</h3>
+            <div class="quad-grid">
+                <div class="grid-item">
+                    <img src="./imges/paan.png" alt="Pans">
+                    <span>Grilling pans</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/shirt2.png" alt="Aprons">
+                    <span>Aprons</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/grill.png" alt="Tools">
+                    <span>Grilling tools</span>
+                </div>
+                <div class="grid-item">
+                    <img src="./imges/glab.png" alt="Gloves">
+                    <span>Gloves</span>
+                </div>
+            </div>
+            <a href="#" class="card-link">Shop Father's Day gifts</a>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="amazon-feed-container">
+
+        <!-- CARD 1: Kitchen Asymmetric (1 Large Top + 3 Small Bottom) -->
+        <div class="card-unit">
+            <h2 class="card-title">Top categories in Kitchen appliances</h2>
+            <div class="kitchen-mixed-grid">
+                <div class="main-feature-row">
+                    <div class="img-holder wide-aspect">
+                        <img src="./imges/hotpot2.png" alt="Cooker">
+                    </div>
+                    <span class="item-label">Cooker</span>
+                </div>
+                <div class="sub-feature-row">
+                    <div class="triple-col">
+                        <div class="img-holder square-aspect"><img src="./imges/coffe.png" alt="Coffee">
+                        </div>
+                        <span class="item-label">Coffee</span>
+                    </div>
+                    <div class="triple-col">
+                        <div class="img-holder square-aspect"><img src="./imges/pot&pan.png" alt="Pots and Pans"></div>
+                        <span class="item-label">Pots and Pans</span>
+                    </div>
+                    <div class="triple-col">
+                        <div class="img-holder square-aspect"><img src="./imges/kettle.png" alt="Kettles">
+                        </div>
+                        <span class="item-label">Kettles</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Explore all products in Kitchen</a>
+        </div>
+
+        <!-- CARD 2: Shop Father's Day Deals (2x2 Grid with Blue Boxes) -->
+        <div class="card-unit">
+            <h2 class="card-title">Shop Father's Day deals</h2>
+            <div class="quad-product-layout">
+                <div class="quad-item">
+                    <div class="img-holder square-aspect light-blue-bg">
+                        <img src="./imges/shirt3.png" alt="Apparel">
+                    </div>
+                    <span class="item-label">Apparel</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect light-blue-bg">
+                        <img src="./imges/cekirate.png" alt="Personal Care">
+                    </div>
+                    <span class="item-label">Personal Care</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect light-blue-bg">
+                        <img src="./imges/hatphone.png" alt="Tech">
+                    </div>
+                    <span class="item-label">Tech</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect light-blue-bg">
+                        <img src="./imges/shoes1.png" alt="Shoes">
+                    </div>
+                    <span class="item-label">Shoes</span>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Explore more gifts</a>
+        </div>
+
+        <!-- CARD 3: Fashion Trends You Like (2x2 Grid Full Image) -->
+        <div class="card-unit">
+            <h2 class="card-title">Fashion trends you like</h2>
+            <div class="quad-product-layout">
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/shirt4.png" alt="Dresses">
+                    </div>
+                    <span class="item-label">Dresses</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/shirt5.png" alt="Knits"></div>
+                    <span class="item-label">Knits</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/shirt6.png" alt="Jackets">
+                    </div>
+                    <span class="item-label">Jackets</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/jewery.png" alt="Jewelry">
+                    </div>
+                    <span class="item-label">Jewelry</span>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Explore more</a>
+        </div>
+
+        <!-- CARD 4: Easy Updates for Elevated Spaces (2x2 Grid Full Image) -->
+        <div class="card-unit">
+            <h2 class="card-title">Easy updates for elevated spaces</h2>
+            <div class="quad-product-layout">
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/h1.png" alt="Baskets & hampers"></div>
+                    <span class="item-label">Baskets & hampers</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/h2.png" alt="Hardware">
+                    </div>
+                    <span class="item-label">Hardware</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/h3.png" alt="Accent furniture"></div>
+                    <span class="item-label">Accent furniture</span>
+                </div>
+                <div class="quad-item">
+                    <div class="img-holder square-aspect"><img src="./imges/h4.png" alt="Wallpaper & paint"></div>
+                    <span class="item-label">Wallpaper & paint</span>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Shop home products</a>
+        </div>
+
+    </div>
+
+    <!-- Main Section Container -->
+    <div class="amazon-slider-container">
+
+        <!-- Heading -->
+        <h2 class="slider-heading">Best Sellers in Clothing, Shoes & Jewelry</h2>
+
+        <!-- Wrapper containing the track and arrows -->
+        <div class="slider-wrapper">
+
+            <!-- Left Navigation Button -->
+            <button class="nav-btn left-btn" aria-label="Previous Products">
+                &#10094;
+            </button>
+
+            <!-- Product Track (Scrollable area) -->
+            <div class="product-track">
+
+                <!-- Product Item 1 -->
+                <div class="product-item">
+                    <img src="./imges/a1.png" alt="Black T-shirts Pack">
+                </div>
+
+                <!-- Product Item 2 -->
+                <div class="product-item">
+                    <img src="./imges/a2.png" alt="Green Casual Shirt">
+                </div>
+
+                <!-- Product Item 3 -->
+                <div class="product-item">
+                    <img src="./imges/a3.png" alt="Black Hoodie Zip-up">
+                </div>
+
+                <!-- Product Item 4 -->
+                <div class="product-item">
+                    <img src="./imges/a4.png" alt="White T-shirts Pack">
+                </div>
+
+                <!-- Product Item 5 -->
+                <div class="product-item">
+                    <img src="/imges/a7.png" alt="White Women T-shirt">
+                </div>
+
+
+
+                <!-- Product Item 8 -->
+                <div class="product-item">
+                    <img src="./imges/a5.png" alt="White Tank Top">
+                </div>
+
+                <!-- Product Item 9 -->
+                <div class="product-item">
+                    <img src="./imges/a3.png" alt="Blue Clogs/Shoes">
+                </div>
+
+            </div>
+
+            <!-- Right Navigation Button -->
+            <button class="nav-btn right-btn" aria-label="Next Products">
+                &#10095;
+            </button>
+
+        </div>
+    </div>
+
+    <div class="amazon-dashboard-wrapper">
+
+        <!-- SECTION 1: Top Horizontal Slider -->
+        <div class="slider-section-container">
+            <h2 class="section-title">Popular products in Beauty internationally</h2>
+            <div class="horizontal-product-track">
+                <div class="slider-item"><img src="./imges/shampo1.png" alt="Eucerin"></div>
+                <div class="slider-item"><img src="./imges/shampo.png" alt="Colgate"></div>
+                <div class="slider-item"><img src="./imges/coolegate.png" alt="EOS Lotion"></div>
+                <div class="slider-item"><img src="./imges/h-color.png" alt="Just For Men"></div>
+                <div class="slider-item"><img src="./imges/skin-cube.png" alt="Skincare Tube"></div>
+                <div class="slider-item"><img src="./imges/shampo2.png" alt="Beauty Device"></div>
+                <div class="slider-item"><img src="./imges/face-w.png" alt="Neutrogena"></div>
+                <div class="slider-item"><img src="./imges/cream.png" alt="High Hold Pads"></div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: 4-Card Grid Layout below the slider -->
+        <div class="quad-cards-grid-row">
+
+            <!-- CARD 1: Most-loved travel essentials (Green Backgrounds) -->
+            <div class="amazon-ui-card">
+                <h3 class="card-heading">Most-loved travel essentials</h3>
+                <div class="internal-2x2-grid">
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-sage-green"><img src="./imges/b1.png" alt="Backpacks">
+                        </div>
+                        <span class="product-name-label">Backpacks</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-sage-green"><img src="./imges/b2.png" alt="Suitcases">
+                        </div>
+                        <span class="product-name-label">Suitcases</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-sage-green"><img src="./imges/b3.png" alt="Accessories"></div>
+                        <span class="product-name-label">Accessories</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-sage-green"><img src="./imges/b4.png" alt="Handbags">
+                        </div>
+                        <span class="product-name-label">Handbags</span>
+                    </div>
+                </div>
+                <a href="#" class="footer-action-link">Discover more</a>
+            </div>
+
+            <!-- CARD 2: Gaming merchandise (Clean White Backgrounds) -->
+            <div class="amazon-ui-card">
+                <h3 class="card-heading">Gaming merchandise</h3>
+                <div class="internal-2x2-grid">
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-flat-white"><img src="./imges/t1.png" alt="Apparel">
+                        </div>
+                        <span class="product-name-label">Apparel</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-flat-white"><img src="./imges/t2.png" alt="Hats">
+                        </div>
+                        <span class="product-name-label">Hats</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-flat-white"><img src="./imges/t3.png" alt="Action figures"></div>
+                        <span class="product-name-label">Action figures</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-flat-white"><img src="./imges/t1.png" alt="Mugs">
+                        </div>
+                        <span class="product-name-label">Mugs</span>
+                    </div>
+                </div>
+                <a href="#" class="footer-action-link">See more</a>
+            </div>
+
+            <!-- CARD 3: Have more fun with family (Peach Backgrounds) -->
+            <div class="amazon-ui-card">
+                <h3 class="card-heading">Have more fun with family</h3>
+                <div class="internal-2x2-grid">
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-soft-peach"><img src="./imges/p1.png" alt="Outdoor Play Sets"></div>
+                        <span class="product-name-label">Outdoor Play Sets</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-soft-peach"><img src="./imges/p2.png" alt="Learning Toys"></div>
+                        <span class="product-name-label">Learning Toys</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-soft-peach"><img src="./imges/t1.png" alt="Action Figures"></div>
+                        <span class="product-name-label">Action Figures</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-soft-peach"><img src="./imges/t3.png" alt="Pretend Play Toys"></div>
+                        <span class="product-name-label">Pretend Play Toys</span>
+                    </div>
+                </div>
+                <a href="#" class="footer-action-link">See more</a>
+            </div>
+
+            <!-- CARD 4: Gear up to get fit (Yellow Stripe Backgrounds) -->
+            <div class="amazon-ui-card">
+                <h3 class="card-heading">Gear up to get fit</h3>
+                <div class="internal-2x2-grid">
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-yellow-stripe"><img src="./imges/m1.png" alt="Clothing"></div>
+                        <span class="product-name-label">Clothing</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-yellow-stripe"><img src="./imges/m2.png" alt="Trackers"></div>
+                        <span class="product-name-label">Trackers</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-yellow-stripe"><img src="./imges/m3.png" alt="Equipment"></div>
+                        <span class="product-name-label">Equipment</span>
+                    </div>
+                    <div class="grid-product-box">
+                        <div class="img-frame bg-yellow-stripe"><img src="./imges/m4.png" alt="Deals">
+                        </div>
+                        <span class="product-name-label">Deals</span>
+                    </div>
+                </div>
+                <a href="#" class="footer-action-link">Discover more</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="amazon-feed-container">
+
+        <!-- ROW 1: Top picks for Pakistan -->
+        <div class="carousel-card-unit">
+            <h2 class="carousel-heading">Top picks for Pakistan</h2>
+            <div class="slider-wrapper">
+                <button class="arrow-btn left-arrow" aria-label="Previous">&#10094;</button>
+
+                <div class="carousel-track">
+                    <div class="carousel-item"><img src="./imges/c1.png" alt="Straps">
+                    </div>
+                    <div class="carousel-item"><img src="./imges/c2.png" alt="Lenovo Idea Tab"></div>
+                    <div class="carousel-item"><img src="./imges/c5.png" alt="Drone">
+                    </div>
+                    <div class="carousel-item"><img src="./imges/c4.png" alt="Drill Kit"></div>
+                    <div class="carousel-item"><img src="./imges/c5.png" alt="Medical Equipment"></div>
+                    <div class="carousel-item"><img src="./imges/c1.png" alt="Equipment"></div>
+                </div>
+
+                <button class="arrow-btn right-arrow" aria-label="Next">&#10095;</button>
+            </div>
+            <!-- Custom Scroll Indicator Bar matching the image -->
+            <div class="scroll-indicator-bar">
+                <div class="scroll-thumb"></div>
+            </div>
+        </div>
+
+        <!-- ROW 2: Best Sellers in Home & Kitchen -->
+        <div class="carousel-card-unit">
+            <h2 class="carousel-heading">Best Sellers in Home & Room</h2>
+            <div class="slider-wrapper">
+                <button class="arrow-btn left-arrow" aria-label="Previous">&#10094;</button>
+
+                <div class="carousel-track">
+                    <div class="carousel-item"><img src="./imges/e1.png" alt="Bedding">
+                    </div>
+                    <div class="carousel-item"><img src="./imges/e2.png" alt="Water Bottle"></div>
+                    <div class="carousel-item"><img src="./imges/e3.png" alt="Photo Frame">
+                    </div>
+                    <div class="carousel-item"><img src="./imges/e5.png" alt="Hangers Pack"></div>
+                    <div class="carousel-item"><img src="./imges/e4.png" alt="Garden Hose">
+                    </div>
+                    <div class="carousel-item"><img src="./imges/e5.png" alt="Shower Curtain"></div>
+                    <div class="carousel-item"><img src="./imges/e2.png" alt="Water Bottle"></div>
+                </div>
+
+                <button class="arrow-btn right-arrow" aria-label="Next">&#10095;</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="amazon-dashboard-container">
+
+        <!-- SECTION 1: Top 4-Card Quad Grid -->
+        <div class="top-quad-row">
+
+            <!-- Card 1: Wireless Tech -->
+            <div class="quad-card">
+                <h3>Explore more in Sports</h3>
+                <div class="grid-2x2">
+                    <div class="product-unit">
+                        <div class="img-box bg-blue"><img src="./imges/g4.png" alt="Smartphones"></div>
+                        <span>Golf</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-black"><img src="./imges/g3.png" alt="Watches"></div>
+                        <span>Fitness</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-yellow"><img src="./imges/g2.png" alt="Headphones">
+                        </div>
+                        <span>Running</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-wood"><img src="./imges/g1.png" alt="Tablets"></div>
+                        <span>Cycling</span>
+                    </div>
+                </div>
+                <a href="#" class="card-link">Discover more</a>
+            </div>
+
+            <!-- Card 2: Level up your beauty routine -->
+            <div class="quad-card">
+                <h3>Level up your beauty routine</h3>
+                <div class="grid-2x2">
+                    <div class="product-unit">
+                        <div class="img-box bg-pink"><img src="./imges/m3.png" alt="Makeup"></div>
+                        <span>Makeup</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-pink-light"><img src="./imges/m4.png" alt="Brushes">
+                        </div>
+                        <span>Brushes</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-pink-light"><img src="./imges/m1.png" alt="Sponges">
+                        </div>
+                        <span>Sponges</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-pink"><img src="./imges/m2.png" alt="Mirrors"></div>
+                        <span>Mirrors</span>
+                    </div>
+                </div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+
+            <!-- Card 3: Level up your PC here -->
+            <div class="quad-card">
+                <h3>Level up your PC here</h3>
+                <div class="grid-2x2">
+                    <div class="product-unit">
+                        <div class="img-box bg-purple-tint"><img src="./imges/r1.png" alt="Laptops">
+                        </div>
+                        <span>Laptops</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-blue-radial"><img src="./imges/r2.png" alt="PCs"></div>
+                        <span>PCs</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-green-gradient"><img src="./imges/r3.png" alt="Hard Drives"></div>
+                        <span>Hard Drives</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-cyan-dark"><img src="./imges/r4.png" alt="Monitors">
+                        </div>
+                        <span>Monitors</span>
+                    </div>
+                </div>
+                <a href="#" class="card-link">Discover more</a>
+            </div>
+
+            <!-- Card 4: Deals on top categories -->
+            <div class="quad-card">
+                <h3>Deals on top categories</h3>
+                <div class="grid-2x2">
+                    <div class="product-unit">
+                        <div class="img-box bg-teal-flat"><img src="./imges/f1.png" alt="Books"></div>
+                        <span>Books</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-orange-flat"><img src="./imges/f2.png" alt="Fashion">
+                        </div>
+                        <span>Fashion</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-pink-flat"><img src="./imges/f3.png" alt="PC"></div>
+                        <span>PC</span>
+                    </div>
+                    <div class="product-unit">
+                        <div class="img-box bg-green-flat"><img src="./imges/f4.png" alt="Beauty">
+                        </div>
+                        <span>Beauty</span>
+                    </div>
+                </div>
+                <a href="#" class="card-link">Discover more</a>
+            </div>
+
+        </div>
+
+        <!-- SECTION 2: Popular products in Wireless internationally -->
+        <div class="slider-card-unit">
+            <h2 class="slider-title">Popular products in Wireless internationally</h2>
+            <div class="track-wrapper">
+                <div class="scroll-track">
+                    <div class="track-item"><img src="./imges/w1.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/w2.png" alt="Item">
+                    </div>
+                    <div class="track-item"><img src="./imges/w3.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/w6.png" alt="Item">
+                    </div>
+                    <div class="track-item"><img src="./imges/w4.png" alt="Item">
+                    </div>
+                    <div class="track-item"><img src="./imges/w5.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/w6.png" alt="Item">
+                    </div>
+                    <div class="track-item"><img src="./imges/w1.png" alt="Item"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Best Sellers in Computers & Accessories -->
+        <div class="slider-card-unit">
+            <h2 class="slider-title">Best Sellers in Computers & Accessories</h2>
+            <div class="track-wrapper">
+                <button class="nav-arrow left-arrow">&#10094;</button>
+                <div class="scroll-track">
+                    <div class="track-item"><img src="./imges/s3.png" alt="Item">
+                    </div>
+                    <div class="track-item"><img src="./imges/s1.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/s2.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/s3.png" alt="Item">
+                    </div>
+                    <div class="track-item"><img src="./imges/s4.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/s6.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/s1.png" alt="Item"></div>
+                    <div class="track-item"><img src="./imges/s4.png" alt="Item"></div>
+                </div>
+                <button class="nav-arrow right-arrow">&#10095;</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="amazon-page-container">
+
+        <!-- SECTION 1: Top 4-Card Quad Row -->
+        <div class="quad-cards-wrapper">
+
+            <!-- Card 1: Most-loved watches (Sage Green Backgrounds) -->
+            <div class="amazon-feature-card">
+                <h3>Level up your gaming</h3>
+                <div class="grid-2x2-layout">
+                    <div class="sub-product">
+                        <div class="img-frame bg-watch-sage"><img src="./imges/i1.png" alt="Women">
+                        </div>
+                        <span>Pc Game</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame bg-watch-sage"><img src="./imges/i2.png" alt="Men"></div>
+                        <span>Game</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame bg-watch-sage"><img src="./imges/i3.png" alt="Girls">
+                        </div>
+                        <span>Xbox</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame bg-watch-sage"><img src="./imges/i4.png" alt="Boys">
+                        </div>
+                        <span>Game</span>
+                    </div>
+                </div>
+                <a href="#" class="action-link">Discover more</a>
+            </div>
+
+            <!-- Card 2: Finds for Home (White Background/Lifestyle Images) -->
+            <div class="amazon-feature-card">
+                <h3>Finds for Home</h3>
+                <div class="grid-2x2-layout">
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/pp1.png" alt="Kitchen"></div>
+                        <span>Kitchen</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/pp2.png" alt="Home Decor"></div>
+                        <span>Home Decor</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/pp3.png" alt="Dining"></div>
+                        <span>Dining</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/pp4.png" alt="Smart Home"></div>
+                        <span>Smart Home</span>
+                    </div>
+                </div>
+                <a href="#" class="action-link">See more</a>
+            </div>
+
+            <!-- Card 3: Upgrade on Tech -->
+            <div class="amazon-feature-card">
+                <h3>Upgrade on Tech</h3>
+                <div class="grid-2x2-layout">
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/r1.png" alt="PC"></div>
+                        <span>PC</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/r2.png" alt="Wireless"></div>
+                        <span>Wireless</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/r3.png" alt="Software"></div>
+                        <span>Software</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame"><img src="./imges/r4.png" alt="Home entertainment">
+                        </div>
+                        <span>Home entertainment</span>
+                    </div>
+                </div>
+                <a href="#" class="action-link">Shop all tech deals</a>
+            </div>
+
+            <!-- Card 4: Explore more in Sports -->
+            <div class="amazon-feature-card">
+                <h3>Explore more in Sports</h3>
+                <div class="grid-2x2-layout">
+                    <div class="sub-product">
+                        <div class="img-frame bg-light-grey"><img src="./imges/g1.png" alt="Cycling">
+                        </div>
+                        <span>Cycling</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame bg-light-grey"><img src="./imges/g2.png" alt="Running">
+                        </div>
+                        <span>Running</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame bg-light-grey"><img src="./imges/g3.png" alt="Exercise & Fitness"></div>
+                        <span>Exercise & Fitness</span>
+                    </div>
+                    <div class="sub-product">
+                        <div class="img-frame bg-light-grey"><img src="./imges/g4.png" alt="Golf">
+                        </div>
+                        <span>Golf</span>
+                    </div>
+                </div>
+                <a href="#" class="action-link">Explore more</a>
+            </div>
+
+        </div>
+
+        <!-- SECTION 2: Bottom Horizontal Slider (Best Sellers in Kitchen & Dining) -->
+        <div class="horizontal-slider-card">
+            <h2 class="slider-title">Best Sellers in Kitchen & Dining</h2>
+            <div class="slider-viewport">
+                <!-- Left Navigation Arrow Mockup -->
+                <button class="slider-arrow left-arr" aria-label="Previous Products">&#10094;</button>
+
+                <div class="slider-track">
+                    <div class="slider-item"><img src="./imges/e1.png" alt="Paper Plates"></div>
+                    <div class="slider-item"><img src="./imges/e2.png" alt="Sparkle Towels"></div>
+                    <div class="slider-item"><img src="./imges/e3.png" alt="Dixie Plates"></div>
+                    <div class="slider-item"><img src="./imges/e4.png" alt="Amazon Basics Towels"></div>
+                    <div class="slider-item"><img src="./imges/e5.png" alt="Scott Paper Towels"></div>
+                    <div class="slider-item"><img src="./imges/e1.png" alt="Bounty Napkins"></div>
+                    <div class="slider-item"><img src="./imges/e2.png" alt="Sparkle Towels"></div>
+                    <div class="slider-item"><img src="./imges/e3.png" alt="Dixie Plates"></div>
+                    <div class="slider-item"><img src="./imges/e4.png" alt="Amazon Basics Towels"></div>
+                </div>
+
+                <!-- Right Navigation Arrow Mockup -->
+                <button class="slider-arrow right-arr" aria-label="Next Products">&#10095;</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 1. PERSONALIZED RECOMMENDATIONS BOX -->
+    <div class="amazon-signin-banner">
+        <div class="signin-inner">
+            <h2><b>See personalized recommendations</b></h2>
+            <button class="amzn-yellow-btn">Sign in</button>
+            <p class="new-cust-text">New customer? <a href="#">Start here.</a></p>
+        </div>
+    </div>
+
+    <!-- 2. BACK TO TOP BAR -->
+    <a href="#" class="back-to-top-btn">Back to top</a>
+
+    <!-- 3. MAIN DIRECTORY FOOTER -->
+    <footer class="main-amazon-footer">
+        <div class="footer-columns-container">
+
+            <div class="footer-col">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Devices</a></li>
+                    <li><a href="#">Amazon Science</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell products on Amazon</a></li>
+                    <li><a href="#">Sell on Amazon Business</a></li>
+                    <li><a href="#">Sell apps on Amazon</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Self-Publish with Us</a></li>
+                    <li><a href="#">Host an Amazon Hub</a></li>
+                    <li><a href="#">&rsaquo; See More Make Money with Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Amazon Payment Products</h3>
+                <ul>
+                    <li><a href="#">Amazon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">Amazon Currency Converter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Amazon and COVID-19</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Manage Your Content and Devices</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <!-- 4. LOGO & SETTINGS BAR -->
+        <div class="footer-settings-bar">
+            <div class="amzn-mini-logo">amazon</div>
+            <div class="settings-pills">
+                <div class="pill-box">🌐 English</div>
+                <div class="pill-box">PKR &nbsp; Pakistani Rupee</div>
+                <div class="pill-box">🇺🇸 United States</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 5. SUBSIDIARY DETAILED SERVICES GRID -->
+    <div class="amazon-deep-footer">
+        <div class="services-grid-layout">
+
+            <div class="service-cell">
+                <a href="#">Amazon Music<br><span>Stream millions of songs</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Amazon Ads<br><span>Reach customers wherever they spend their time</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">6pm<br><span>Score deals on fashion brands</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">AbeBooks<br><span>Books, art & collectibles</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">ACX<br><span>Audiobook Publishing Made Easy</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Sell on Amazon<br><span>Start a Selling Account</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Veeqo<br><span>Shipping Software Inventory Management</span></a>
+            </div>
+
+            <div class="service-cell">
+                <a href="#">Amazon Business<br><span>Everything For Your Business</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">AmazonGlobal<br><span>Ship Orders Internationally</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Amazon Web Services<br><span>Scalable Cloud Computing Services</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Audible<br><span>Listen to Books & Original Audio Performances</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Box Office Mojo<br><span>Find Movie Box Office Data</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Goodreads<br><span>Book reviews & recommendations</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">IMDb<br><span>Movies, TV & Celebrities</span></a>
+            </div>
+
+            <div class="service-cell">
+                <a href="#">IMDbPro<br><span>Get Info Entertainment Professionals Need</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Kindle Direct Publishing<br><span>Indie Digital & Print Publishing Made Easy</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Prime Video Direct<br><span>Video Distribution Made Easy</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Shopbop<br><span>Designer Fashion Brands</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Woot!<br><span>Deals and Shenanigans</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Zappos<br><span>Shoes & Clothing</span></a>
+            </div>
+            <div class="service-cell">
+                <a href="#">Ring<br><span>Smart Home Security Systems</span></a>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM LEGAL LINKS -->
+        <div class="legal-links-bar">
+            <div class="links-row">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Consumer Health Data Privacy Disclosure</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            <p>&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

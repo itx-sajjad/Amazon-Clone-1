@@ -1,0 +1,1686 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: #e3e6e6;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	background-color: #131921;
+	color: white;
+	padding: 8px 0px 8px 16px; /* Remove right padding */
+	height: 60px;
+}
+
+.nav-logo {
+	margin-right: 20px;
+}
+.amazon-logo {
+	width: 100px;
+	margin-top: 5px;
+}
+
+.nav-location,
+.nav-lang,
+.nav-account,
+.nav-orders,
+.nav-cart {
+	border: 1px solid transparent;
+	transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.nav-logo:hover{
+    background: #232f3e;
+	border: 1px solid #fff
+}
+
+.nav-location {
+	margin-right: 20px;
+	line-height: 1.1;
+	padding: 4px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.nav-location:hover {
+	background: #232f3e;
+	border-color: #fff;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+.nav-location-line1 {
+	font-size: 12px;
+	color: #ccc;
+}
+.nav-location-line2 {
+	font-size: 14px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+.nav-search {
+	display: flex;
+	flex: 1;
+	max-width: 900px;
+	margin: 0 20px;
+}
+.nav-search-select {
+	padding: 8px 6px;
+	border: none;
+	border-radius: 4px 0 0 4px;
+	background: #e6e6e6;
+	color: #555;
+	font-size: 14px;
+}
+.nav-search-input {
+	flex: 1;
+	padding: 8px;
+	border: none;
+	font-size: 16px;
+}
+.nav-search-btn {
+	background: #febd69;
+	border: none;
+	padding: 0 18px;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	color: #232f3e;
+	transition: background 0.2s;
+}
+.nav-search-btn:hover {
+	background: #f3a847;
+}
+
+.nav-lang {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	cursor: pointer;
+	gap: 4px;
+	padding: 4px 8px;
+	border-radius: 3px;
+	transition: background 0.2s, border 0.2s;
+}
+.nav-lang:hover {
+	background: #232f3e;
+	border: 1px solid #fff;
+}
+.nav-flag {
+	width: 22px;
+	margin-right: 4px;
+	border-radius: 2px;
+}
+
+.nav-account {
+	margin-right: 20px;
+	cursor: pointer;
+	line-height: 1.1;
+	position: relative;
+	padding: 4px 8px;
+	border-radius: 3px;
+	transition: background 0.2s, border 0.2s;
+}
+.nav-account:hover {
+	background: #232f3e;
+	border: 1px solid #fff;
+}
+
+.account-dropdown {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+	width: 350px;
+	padding-top: 10px;
+}
+.nav-account:hover .account-dropdown,
+.nav-account:focus-within .account-dropdown {
+	display: block;
+}
+.account-dropdown-box {
+	background: #fff;
+	color: #111;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	padding: 20px 24px 16px 24px;
+	min-width: 300px;
+}
+.account-signin-btn {
+	width: 100%;
+	background: #ffd814;
+	border: 1px solid #fcd200;
+	border-radius: 8px;
+	padding: 8px 0;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.account-signin-btn:hover {
+	background: #f7ca00;
+}
+.account-new {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+.account-new a {
+	color: #007185;
+	text-decoration: none;
+}
+.account-new a:hover {
+	text-decoration: underline;
+}
+.account-list a {
+	color: #111;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	margin: 4px 0;
+	transition: color 0.2s;
+}
+.account-list a:hover {
+	color: #c45500;
+}
+.nav-account-line1 {
+	font-size: 12px;
+	color: #ccc;
+}
+.nav-account-line2 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.nav-orders {
+	margin-right: 20px;
+	cursor: pointer;
+	line-height: 1.1;
+	padding: 4px 8px;
+	border-radius: 3px;
+	transition: background 0.2s, border 0.2s;
+}
+.nav-orders:hover {
+	background: #232f3e;
+	border: 1px solid #fff;
+}
+.nav-orders-line1 {
+	font-size: 12px;
+	color: #ccc;
+}
+.nav-orders-line2 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.nav-cart {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	padding: 4px 8px;
+	border-radius: 3px;
+	transition: background 0.2s, border 0.2s;
+}
+.nav-cart:hover {
+	background: #232f3e;
+	border: 1px solid #fff;
+}
+.nav-cart-count {
+	position: absolute;
+	top: 0;
+	left: 18px;
+	background: #f08804;
+	color: #232f3e;
+	font-weight: bold;
+	border-radius: 50%;
+	padding: 2px 6px;
+	font-size: 12px;
+}
+.nav-cart-text {
+	margin-left: 6px; /* Reduced gap */
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* Horizontal Menu Styles */
+.horizontal-menu {
+	background: #232f3e;
+	color: #fff;
+	padding: 0 0 0 12px;
+	border-bottom: 2px solid #fff;
+}
+.horizontal-menu ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 38px;
+}
+.horizontal-menu li {
+	padding: 0 16px;
+	font-size: 15px;
+	cursor: pointer;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid transparent;
+	transition: background 0.2s, border-bottom 0.2s;
+}
+.horizontal-menu li:first-child {
+	font-weight: bold;
+	padding-left: 0;
+}
+.horizontal-menu li:hover, .horizontal-menu li.active {
+	background: #131921;
+	border-bottom: 2px solid #fff;
+}
+.horizontal-menu i {
+	margin-right: 6px;
+	font-size: 18px;
+}
+
+
+/* Basic Reset */
+
+.amazon-container {
+    max-width: 1480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center; /* Horizontally center karne ke liye */
+    align-items: center;     /* Vertically center karne ke liye (optional) */
+    width: 100%;             /* Container ko poori width dene ke liye */
+    background-color: #eaeded; /* Amazon ka light grey background color */
+}
+
+/* Cards Section - Pulls layout upwards onto the banner */
+.cards-grid {
+    max-width: 1420px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: -150px; /* Is se cards banner ke upar overlay ho jate hain */
+    position: relative;
+    z-index: 2;
+    align-items: stretch;
+}
+
+/* Single Content Card Styling */
+.content-card {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+
+.content-card h3 {
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* 1-Image layout styling */
+.single-image-box {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.single-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 4-Grid Image Layout Styling */
+.quad-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 10px;
+    margin-bottom: 15px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    background-color: #f7f7f7;
+    padding: 5px;
+}
+
+.grid-item span {
+    font-size: 0.75rem;
+    color: #111;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Card Link Styling */
+.card-link {
+    font-size: 0.85rem;
+    color: #007185;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.card-link:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 250px;
+    }
+    .cards-grid {
+        margin-top: -40px;
+    }
+}
+
+/* Resetting Standard Styles */
+
+/* Container defining the row layout seen in image_9c7c89.jpg */
+.amazon-feed-container {
+    max-width: 1420px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual Block Units */
+.card-unit {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+
+/* Amazon bold headers structure */
+.card-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    line-height: 26px;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+
+/* ----------------------------------
+   Card 1: Kitchen Mix-Grid Layout Rules 
+---------------------------------- */
+.kitchen-mixed-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.main-feature-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-feature-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.triple-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------------------
+   Cards 2, 3, 4: Quad Layout Rules
+---------------------------------- */
+.quad-product-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.quad-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* ----------------------------------
+   Common Image Containers Controls
+---------------------------------- */
+.img-holder {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+/* 16:9 ~ Aspect Ratio for Large banner items */
+.wide-aspect {
+    height: 140px;
+}
+
+.wide-aspect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Exact Square Frames Aspect Ratio */
+.square-aspect {
+    height: 102px;
+}
+
+.square-aspect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Blueprint for Father's Day card specific overlay tint */
+.light-blue-bg {
+    background-color: #d7e6f5; /* Image match color profile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.light-blue-bg img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Text Captions Setup */
+.item-label {
+    font-size: 12px;
+    color: #0f1111;
+    margin-top: 5px;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit text to single line just like amazon labels */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ----------------------------------
+   Footer Links Controls
+---------------------------------- */
+.see-more-link {
+    font-size: 13px;
+    color: #007185; /* Amazon classic blue-green link */
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.see-more-link:hover {
+    color: #c45500; /* Amazon hover state color */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for mid-size screens */
+@media (max-width: 1100px) {
+    .amazon-feed-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .amazon-feed-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styling Reset */
+
+/* Container Box */
+.amazon-slider-container {
+    background-color: #ffffff;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px; /* Top/Bottom padding, sides 0 for edge arrows */
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Gap between the lower 4-card grid and the Best Sellers slider */
+.amazon-feed-container + .amazon-slider-container {
+    margin-top: 20px;
+}
+
+/* Heading exactly like image_9d5a61.jpg */
+.slider-heading {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+
+/* Wrapper to hold track and absolute positioned buttons */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Horizontal Scroll Track */
+.product-track {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 45px; /* Side padding to give space for navigation buttons */
+    width: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.product-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.product-track {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Individual Product Images Styling */
+.product-item {
+    flex: 0 0 auto; /* Prevents shrinking, items keep their native width */
+    width: 160px;   /* Image frame width matching the image pattern */
+    height: 200px;  /* Image frame height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.product-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures images don't stretch weirdly */
+    transition: transform 0.2s ease;
+}
+
+/* Subtle zoom effect on hover like standard modern cards */
+.product-item img:hover {
+    transform: scale(1.03);
+}
+
+/* Navigation Buttons (Arrows) */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    width: 35px;
+    height: 45px;
+    font-size: 16px;
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 10;
+    transition: background-color 0.1s, border-color 0.1s;
+}
+
+.nav-btn:hover {
+    background-color: #f7fafa;
+    border-color: #a8b3b3;
+}
+
+.nav-btn:focus {
+    outline: 2px solid #e77600; /* Amazon signature orange focus outline */
+}
+
+/* Left & Right Button Positioning matching image_9d5a61.jpg */
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+/* Core Structural Reset */
+
+.amazon-dashboard-wrapper {
+    max-width: 1440px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Slider aur lower row ke beech ka gap */
+}
+
+/* Common Typography & Headings Rules */
+.section-title, .card-heading {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    line-height: 26px;
+    letter-spacing: -0.3px;
+}
+
+.section-title {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------
+   SECTION 1: Top Beauty Slider Container Style
+-------------------------------------------------- */
+.slider-section-container {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.horizontal-product-track {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar behaviors removal */
+.horizontal-product-track::-webkit-scrollbar {
+    display: none;
+}
+.horizontal-product-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    width: 145px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------
+   SECTION 2: Lower Quad-Cards Setup (image_9d65e5.jpg match)
+-------------------------------------------------- */
+.quad-cards-grid-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.amazon-ui-card {
+    background-color: #ffffff;
+    padding: 20px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 420px; 
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-heading {
+    margin-bottom: 12px;
+    min-height: 52px; /* Title elements uniform look template */
+}
+
+.internal-2x2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.grid-product-box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------------------------------------
+   Different Image Background Themes For Product Boxes
+-------------------------------------------------- */
+.img-frame {
+    width: 100%;
+    height: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.img-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Travel Card Background (Sage Green Tone) */
+.bg-sage-green {
+    background-color: #a3c1ad; 
+}
+
+/* Gaming Card Background (Clean White) */
+.bg-flat-white {
+    background-color: #ffffff;
+}
+
+/* Family Card Background (Soft Peach Pink) */
+.bg-soft-peach {
+    background-color: #fce1d4;
+}
+
+/* Fitness Card Background (Diagonal Yellow Stripe Effect) */
+.bg-yellow-stripe {
+    background: linear-gradient(135deg, #ffffff 35%, #fcd200 35%);
+}
+
+/* --------------------------------------------------
+   Labels & Footer Actions Styling
+-------------------------------------------------- */
+.product-name-label {
+    font-size: 12px;
+    color: #0f1111;
+    margin-top: 5px;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.footer-action-link {
+    font-size: 13px;
+    color: #007185;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.footer-action-link:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+    .quad-cards-grid-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 650px) {
+    .quad-cards-grid-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Styling Reset */
+
+/* Outer layout wrapper */
+.amazon-feed-container {
+    max-width: 1440px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between the two row blocks */
+}
+
+/* White background card unit for each slider */
+.carousel-card-unit {
+    background-color: #ffffff;
+    padding: 20px 0px 25px 0px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Heading style exactly matching image_9d78a8.jpg */
+.carousel-heading {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    padding-left: 20px;
+    margin-bottom: 18px;
+    line-height: 26px;
+}
+
+/* Slider frame layout */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Horizontal scrollable track */
+.carousel-track {
+    display: flex;
+    gap: 24px; /* Space between products */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 5px 50px; /* Padding to prevent images touching the edge arrows */
+    width: 100%;
+}
+
+/* Hide default operating system scrollbars */
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+.carousel-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Individual Product Container */
+.carousel-item {
+    flex: 0 0 auto;
+    height: 180px; /* Fixed height for product row symmetry */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevents image distortion */
+    cursor: pointer;
+}
+
+/* Navigation Arrow Buttons overlay style */
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    width: 40px;
+    height: 48px;
+    font-size: 18px;
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 5;
+    transition: background-color 0.1s;
+}
+
+.arrow-btn:hover {
+    background-color: #f7fafa;
+}
+
+.arrow-btn:focus {
+    outline: 2px solid #e77600; /* Amazon orange focus wrapper */
+}
+
+.left-arrow {
+    left: 15px;
+}
+
+.right-arrow {
+    right: 15px;
+}
+
+/* --------------------------------------------------
+   Custom Scroll Indicator Bar (Seen below first row)
+-------------------------------------------------- */
+.scroll-indicator-bar {
+    width: 200px;
+    height: 4px;
+    background-color: #e2e2e2;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-thumb {
+    width: 35%;
+    height: 100%;
+    background-color: #a6a6a6; /* Grey indicator bar color match */
+    border-radius: 2px;
+}
+
+
+
+/* Base Style Overrides */
+
+/* Master Grid Wrapper */
+.amazon-dashboard-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Gap between Best Sellers in Home & Kitchen and the lower 4-box section */
+.amazon-feed-container + .amazon-dashboard-container {
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------
+   Section 1: 4-Card Grid Utilities & Layout rules
+-------------------------------------------------- */
+.top-quad-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.quad-card {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.quad-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    line-height: 26px;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+.product-unit {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-box {
+    width: 100%;
+    height: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------
+   Color Palette Profiles matching image_9dda09.jpg
+-------------------------------------------------- */
+.bg-blue          { background-color: #0082e6; }
+.bg-black         { background-color: #000000; }
+.bg-yellow        { background-color: #fcd200; }
+.bg-wood          { background-color: #4a3525; }
+
+.bg-pink          { background-color: #fbc7c7; }
+.bg-pink-light    { background-color: #fce3e3; }
+
+.bg-purple-tint   { background-color: #ecdcf7; }
+.bg-blue-radial   { background-color: #d1e4fc; }
+.bg-green-gradient{ background-color: #c7f1d4; }
+.bg-cyan-dark     { background-color: #004d61; }
+
+.bg-teal-flat     { background-color: #bbf2f6; }
+.bg-orange-flat   { background-color: #f7dac4; }
+.bg-pink-flat     { background-color: #fbcce6; }
+.bg-green-flat    { background-color: #ccefd2; }
+
+/* Labels & Link styling */
+.quad-card span {
+    font-size: 12px;
+    color: #0f1111;
+    margin-top: 5px;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-link {
+    font-size: 13px;
+    color: #007185;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+}
+.card-link:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   Sections 2 & 3: Horizontal Sliders Rules
+-------------------------------------------------- */
+.slider-card-unit {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.slider-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+
+.track-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 5px 50px;
+    width: 100%;
+}
+
+/* Hide Native Trackers */
+.scroll-track::-webkit-scrollbar { display: none; }
+.scroll-track { -ms-overflow-style: none; scrollbar-width: none; }
+
+.track-item {
+    flex: 0 0 auto;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Arrow Overlays positioning rules */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    width: 38px;
+    height: 46px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.left-arrow { left: 12px; }
+.right-arrow { right: 12px; }
+
+/* Responsive break settings */
+@media (max-width: 1150px) {
+    .top-quad-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .top-quad-row { grid-template-columns: 1fr; }
+}
+
+
+/* Core Layout Reset */
+
+/* Master Page Grid Wrapper */
+.amazon-page-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Gap between Best Sellers in Computers & Accessories and the lower 4-box section */
+.amazon-dashboard-container + .amazon-page-container {
+    margin-top: 20px;
+}
+
+/* Gap between Best Sellers in Kitchen & Dining and the footer */
+.amazon-page-container + .amazon-signin-banner {
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------
+   SECTION 1: Top 4 Quad-Cards Layout Setup
+-------------------------------------------------- */
+.quad-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.amazon-feature-card {
+    background-color: #ffffff;
+    padding: 20px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px; /* Fixed height for uniform block look */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.amazon-feature-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    line-height: 26px;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+/* Internal 2x2 Grid Structure */
+.grid-2x2-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+.sub-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Product Box Core Styling */
+.img-frame {
+    width: 100%;
+    height: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ffffff; /* Default transparent clean background */
+}
+
+.img-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Lifestyle crop framing */
+}
+
+/* Watches Specific Sage Green Tint Background */
+.bg-watch-sage {
+    background-color: #b8c7bc; /* image_9decca.jpg me jo specific dull green color h */
+}
+
+.bg-watch-sage img {
+    object-fit: contain; /* Prevents watches scaling cutoffs */
+    padding: 6px;
+}
+
+/* Sports Specific Light Grey Background Tint */
+.bg-light-grey {
+    background-color: #f7f7f7;
+}
+.bg-light-grey img {
+    object-fit: contain;
+    padding: 4px;
+}
+
+/* Individual Tiny Item Labels */
+.amazon-feature-card span {
+    font-size: 12px;
+    color: #0f1111;
+    margin-top: 5px;
+    line-height: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Footer See More/Discover Links */
+.action-link {
+    font-size: 13px;
+    color: #007185; /* Standard Amazon Core Teal Link */
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+}
+.action-link:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   SECTION 2: Bottom Horizontal Slider Section Rules
+-------------------------------------------------- */
+.horizontal-slider-card {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.slider-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f1111;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+
+.slider-viewport {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* The horizontal scrolling channel */
+.slider-track {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 5px 55px; /* Leaves perfect negative margins for absolute overlay buttons */
+    width: 100%;
+}
+
+/* Disabling native UI scrollbars */
+.slider-track::-webkit-scrollbar { display: none; }
+.slider-track { -ms-overflow-style: none; scrollbar-width: none; }
+
+.slider-item {
+    flex: 0 0 auto;
+    height: 160px; /* Fixed height profile for bulk objects */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Safeguards aspect ratios of thick grocery products */
+    cursor: pointer;
+}
+
+/* Side Sliding Button Arrows Layout */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    width: 38px;
+    height: 46px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.left-arr { left: 15px; }
+.right-arr { right: 15px; }
+
+/* Responsive Media Controls */
+@media (max-width: 1150px) {
+    .quad-cards-wrapper { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .quad-cards-wrapper { grid-template-columns: 1fr; }
+}
+
+
+
+/* Core Structural Reset */
+
+/* --------------------------------------------------
+   1. Recommendations Box Styling
+-------------------------------------------------- */
+.amazon-signin-banner {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 35px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.signin-inner {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.amazon-signin-banner h2 {
+    font-size: 13px;
+    color: #0f1111;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.amzn-yellow-btn {
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid #a88734;
+    border-radius: 3px;
+    width: 100%;
+    height: 28px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+}
+
+.amzn-yellow-btn:hover {
+    background: linear-gradient(to bottom, #f5d78e, #eeb933);
+    border-color: #846a29;
+}
+
+.new-cust-text {
+    font-size: 11px;
+    color: #0f1111;
+    margin-top: 6px;
+}
+
+.new-cust-text a {
+    color: #007185;
+    text-decoration: none;
+}
+.new-cust-text a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   2. Back To Top Button Bar
+-------------------------------------------------- */
+.back-to-top-btn {
+    display: block;
+    background-color: #37475a;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.back-to-top-btn:hover {
+    background-color: #485769;
+}
+
+/* --------------------------------------------------
+   3. Main Directory Footer
+-------------------------------------------------- */
+.main-amazon-footer {
+    background-color: #232f3e;
+    padding: 40px 0 30px 0;
+}
+
+.footer-columns-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-col {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ddd;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #3a4553;
+    margin: 40px 0 30px 0;
+}
+
+/* --------------------------------------------------
+   4. Logo & Settings Bar
+-------------------------------------------------- */
+.footer-settings-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.amzn-mini-logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+.settings-pills {
+    display: flex;
+    gap: 10px;
+}
+
+.pill-box {
+    border: 1px solid #848688;
+    border-radius: 3px;
+    padding: 6px 12px;
+    color: #ccc;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.pill-box:hover {
+    border-color: #ffffff;
+}
+
+/* --------------------------------------------------
+   5. Subsidiary Detailed Services Grid
+-------------------------------------------------- */
+.amazon-deep-footer {
+    background-color: #131a22;
+    padding: 40px 20px 30px 20px;
+}
+
+.services-grid-layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 clean columns match */
+    gap: 20px 15px;
+}
+
+.service-cell a {
+    color: #ddd;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 14px;
+    display: block;
+}
+
+.service-cell a span {
+    color: #999;
+    font-weight: normal;
+    display: block;
+    margin-top: 2px;
+}
+
+.service-cell a:hover {
+    text-decoration: underline;
+}
+
+/* Legal Bottom Rules */
+.legal-links-bar {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.links-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.links-row a {
+    color: #ddd;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.links-row a:hover {
+    text-decoration: underline;
+}
+
+.legal-links-bar p {
+    color: #999;
+    font-size: 11px;
+}
+
+/* Responsive Breakdown */
+@media (max-width: 1000px) {
+    .services-grid-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer-columns-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footer-col {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-columns-container {
+        flex-direction: column;
+    }
+    .footer-settings-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
